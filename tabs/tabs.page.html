@@ -1,0 +1,22 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="apps"></ion-icon>
+
+    </ion-tab-button>
+
+    <ion-tab-button tab="blanks">
+      <ion-icon name="heart"></ion-icon>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="cart">
+      <ion-icon name="cart-outline"></ion-icon>
+     <ion-badge *ngIf="(cartItemCount$ | async) > 0">{{ cartItemCount$ | async }}</ion-badge>
+    </ion-tab-button>
+
+
+  <ion-tab-button tab="settings">
+    <ion-icon name="settings"></ion-icon>
+  </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

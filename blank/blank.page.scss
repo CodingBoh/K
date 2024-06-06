@@ -1,0 +1,50 @@
+.custom-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #f8f8f8;
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+    .header-info {
+      h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      
+      p {
+        margin: 0;
+        color: #666;
+      }
+    }
+  }
+
+  .card-content {
+    padding: 16px;
+    background-color: #fff;
+    p {
+      margin: 0;
+      color: #333;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f8f8f8;
+  }
+}

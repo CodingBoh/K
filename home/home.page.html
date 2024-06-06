@@ -1,0 +1,22 @@
+<ion-content>
+  <div class="header">
+    <h1>Menu</h1>
+    <div class="avatar">
+    <ion-img src="/assets/icon.png" routerLink="/profile"></ion-img>
+  </div>
+  </div>
+
+  <ion-searchbar ></ion-searchbar>
+  <div class="categories" >  
+         <ion-button (click)="filterItems('all',$event)" class="filter-button"><ion-img src="/assets/items1.png"></ion-img></ion-button>
+         <ion-button (click)="filterItems('Iced',$event)"  class="filter-button"><ion-img src="/assets/items2.png"></ion-img></ion-button>
+         <ion-button (click)="filterItems('Hot',$event)"  class="filter-button"><ion-img src="/assets/items3.png"></ion-img></ion-button>
+         <ion-button (click)="filterItems('Frappe',$event)"  class="filter-button"><ion-img src="/assets/items4.png"></ion-img></ion-button>
+         <p *ngFor="let item of categories">{{item.label}}</p>
+</div>
+
+  <h1 class="list-header">Popular</h1>
+  <div class="food-list"  >
+   <app-coffee-card *ngFor="let item of itemsToShow" [coffee]="item" (click)="goToAbout(item.id)"></app-coffee-card>
+  </div>
+</ion-content>

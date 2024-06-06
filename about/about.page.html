@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/tabs/home">
+        <ion-icon slots="icon-only" name="arrow-back-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button   (click)="toggleFavorite(coffee)"  >
+        <ion-icon slots="icon-only" name="heart"
+        [color]="isFavorite(coffee)? 'danger': 'light'" 
+       ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+
+<div class="card">
+    <div class="image"> 
+      <ion-img [src]="coffee.image" ></ion-img>
+    </div>
+
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">{{coffee.name}}</h1>
+        <p class="ion-no-margin"><sup>₱ </sup>{{coffee.price | number: '1.0'}}</p>
+      </div>
+    </div>
+
+    <div class="rates">
+      <div class="badge">
+        <ion-icon name="timer-outline"></ion-icon>30m
+      </div>
+      <div class="badge">
+        <ion-icon name="star-outline"></ion-icon>4.5
+      </div>
+    </div>
+
+    <div class="about">
+      <h1>About</h1>
+      <p>{{coffee.description}}</p>
+    </div>
+
+  
+
+    <ion-button expand="block"  (click)="addToCart(coffee)">ADD TO CART</ion-button>
+  </div>
+</ion-content>

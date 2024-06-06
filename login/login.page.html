@@ -1,0 +1,33 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<ion-content>
+  <ion-img src="/assets/log.png" ></ion-img>
+
+
+  <div class="custom-box">
+    <div class="box-content">
+      <div class="text-content">
+      <b>Log In</b>
+      <h5>Let's Get Started</h5>
+    </div>
+    <br>
+        <ion-input class="input" type="text" placeholder="Username" [(ngModel)]="email"></ion-input> 
+        <br>
+        <ion-input class="input" type="text" placeholder="Password" [(ngModel)]="password"></ion-input>    
+    </div>
+
+    <b class="frgtpass" routerLink="/reset">Forgot Your Password?</b>
+<br><br>
+<div class="btnCent">
+    <ion-button class="btnCust1" (click)="logIn()">
+      Log In
+        </ion-button>
+        <br><br>
+        <b [routerLink]="['/landing']">Close</b>
+      </div>
+     
+  </div>
+
+    
+
+</ion-content>
+
